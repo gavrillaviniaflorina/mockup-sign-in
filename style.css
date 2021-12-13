@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.shirt section {
+    display: flex;
+    flex-direction: row;
+}
+
+.register section {
+    background-color: white;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "checkbox label imag" "time time money";
+}
+
+.register input {
+    grid-area: checkbox;
+}
+
+.register label {
+    grid-area: label;
+}
+
+.time {
+    grid-area: time;
+}
+
+.money {
+    grid-area: money;
+}
+
+.register img {
+    grid-area: imag;
+}
+
+img {
+    width: 10px;
+}
+
+.payment section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.info {
+    background-color: white;
+}
+
+button {
+    margin-top: 10px;
+    height: 50px;
+    background-color: pink;
+    color: white;
+}
