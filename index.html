@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -20,9 +25,9 @@
         </header>
 
         <main>
-            <p>*- required field</p>
+            <p class="required">*- required field</p>
 
-            <fieldset>
+            <fieldset class="basic">
                 <h3>Basic Info</h3>
 
 
@@ -31,21 +36,28 @@
 
 
 
+
+
                 <label for="email">Email Address *</label>
                 <input type="email" id="email" name="user_email">
 
 
 
-                <label for="role">Job Role</label>
+            </fieldset>
 
-                <select id="role" name="role">
+            <fieldset class="role">
+
+                <label for="role">Job Role</label>
+                <section>
+                    <select id="role" name="role">
                         <option> Select Job Role</option>
                         <option value="manager"> Manager</option>
                         <option value="developer">Developer</option>
                     
                     </select>
-                <input type="text" id="role" name="role">
+                    <input type="text" id="role" name="role">
 
+                </section>
             </fieldset>
 
 
@@ -53,7 +65,7 @@
                 <h3>T-Shirt info</h3>
 
                 <section>
-                    <article>
+                    <article class="size">
                         <label for="size">Size:</label>
                         <select id="size">
                         <option value="XS">XS</option>
@@ -63,7 +75,7 @@
                     </select>
                     </article>
 
-                    <article>
+                    <article class="design">
 
                         <label for="design">Design: </label>
                         <select id="design">
@@ -73,32 +85,32 @@
                     </select>
 
                     </article>
-                </section>
 
 
-                <article>
 
-                    <label for="color">Color: </label>
-                    <select id="color">
+                    <article class="color">
+
+                        <label for="color">Color: </label>
+                        <select id="color">
                         <option>Select a design theme above</option>
                         <option value="blue">Blue</option>
                         <option value="yellow">Yellow</option>
                     </select>
-                </article>
-
+                    </article>
+                </section>
 
             </fieldset>
 
             <fieldset class="register">
-                <h3>Register for Activities *</h3>
-                <section>
+                <h3 class="title">Register for Activities *</h3>
+                <section class="one">
                     <input type="checkbox" id="" value="" name="">
                     <label>Main Conference</label><br>
                     <img src="img/js.svg">
                     <p class="money">$200</p>
                 </section>
 
-                <section>
+                <section class="two">
                     <input type="checkbox" id="" value="" name="">
                     <label>JavaScript Libraries Workshop</label><br>
                     <img src="img/react.svg">
@@ -106,7 +118,7 @@
                     <p class="time">Tuesday 9am-12pm</p>
                 </section>
 
-                <section>
+                <section class="three">
                     <input type="checkbox" id="" value="" name="">
                     <label>Node.js Workshop</label><br>
                     <img src="img/node.svg">
@@ -114,7 +126,7 @@
                     <p class="time"> Tuesday 1pm-4pm</p>
                 </section>
 
-                <section>
+                <section class="four">
                     <input type="checkbox" id="" value="" name="">
                     <label>JavaScript Frameworks Workshop</label><br>
                     <img src="img/angular.svg">
@@ -122,7 +134,7 @@
                     <p class="time">Tuesday 8am-12pm</p>
                 </section>
 
-                <section>
+                <section class="five">
                     <input type="checkbox" id="" value="" name="">
                     <label>Build tools Workshop</label><br>
                     <img src="img/build.svg">
@@ -130,7 +142,7 @@
                     <p class="time">Tuesday 8am-12pm</p>
                 </section>
 
-                <section>
+                <section class="six">
                     <input type="checkbox" id="" value="" name="">
                     <label>npm Workshop</label><br>
                     <img src="img/npm.svg">
@@ -138,7 +150,7 @@
                     <p class="time">Tuesday 8am-12pm</p>
                 </section>
 
-                <section>
+                <section class="seven">
                     <input type="checkbox" id="" value="" name="">
                     <label>Express Workshop</label><br>
                     <img src="img/express.svg">
@@ -146,7 +158,7 @@
                     <p class="time">Tuesday 8am-12pm</p>
                 </section>
 
-                <h3> Total:$0</h3>
+                <h3 class="total"> Total:$0</h3>
             </fieldset>
 
             <fieldset class="payment">

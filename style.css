@@ -2,43 +2,128 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    display: flex;
+    height: 40px;
+}
+
+select {
+    display: flex;
+    height: 40px;
+}
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: pink;
+    color: white;
+}
+
+header p {
+    margin-bottom: 0px;
+}
+
+header h1 {
+    margin-top: 10px;
 }
 
 main {
     background-color: #E0E0E0;
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.required {
+    margin-left: 10px;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
+    border: none;
+}
+
+fieldset section {
+    margin-top: 10px;
+}
+
+.role section {
+    display: flex;
+    flex-direction: column;
+}
+
+.role section input {
+    margin-top: 5px;
+}
+
+.basic input {
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .shirt section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "size design" "col col";
+    grid-gap: 20px;
+}
+
+.size {
+    grid-area: size;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.size select {
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+.design {
+    grid-area: design;
+}
+
+.design select {
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+.color {
+    grid-area: col;
+}
+
+.color select {
+    display: block;
+    width: 100%;
+    height: 40px;
 }
 
 .register section {
     background-color: white;
     margin-top: 10px;
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: 25px 1fr 50px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "checkbox label imag" "time time money";
 }
 
 .register input {
     grid-area: checkbox;
+    margin-top: 20px;
 }
 
 .register label {
+    margin-top: 20px;
     grid-area: label;
 }
 
@@ -51,11 +136,9 @@ fieldset {
 }
 
 .register img {
+    margin-top: 20px;
     grid-area: imag;
-}
-
-img {
-    width: 10px;
+    width: 20px;
 }
 
 .payment section {
@@ -74,4 +157,82 @@ button {
     height: 50px;
     background-color: pink;
     color: white;
+}
+
+@media(min-width:1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px minmax(200px, 1fr) 40px minmax(200px, 1fr) 1fr 100px;
+        grid-template-areas: "req req" "basic shirt" "role role" "register register" "pay pay" "but but";
+        grid-gap: 40px;
+    }
+    .required {
+        grid-area: req;
+    }
+    .basic {
+        grid-area: basic;
+    }
+    .shirt {
+        grid-area: shirt;
+    }
+    .register {
+        grid-area: register;
+    }
+    .payment {
+        grid-area: pay;
+    }
+    button {
+        grid-area: but;
+    }
+    .role {
+        grid-area: role;
+    }
+    .role section {
+        display: flex;
+        flex-direction: row;
+    }
+    .role select {
+        display: block;
+        width: 100%;
+    }
+    .role input {
+        display: block;
+        width: 100%;
+    }
+    .register {
+        display: grid;
+        grid-template-rows: 200px repeat(4, 1fr) 200;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "title title" "one one" "two three" "four five" "six seven" "total total";
+        grid-gap: 10px;
+    }
+    title {
+        grid-area: title;
+    }
+    .one {
+        grid-area: one;
+    }
+    .two {
+        grid-area: two;
+    }
+    .three {
+        grid-area: three;
+    }
+    .four {
+        grid-area: four;
+    }
+    .five {
+        grid-area: five;
+    }
+    .six {
+        grid-area: six;
+    }
+    .seven {
+        grid-area: seven;
+    }
+    .total {
+        grid-area: total;
+        text-align: end;
+    }
 }
